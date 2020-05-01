@@ -1,14 +1,17 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import logo from './assets/logo.png';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
+    <Switch>
+      <div className="App">
+        <div>
+          <Route path="/" render={() => <h1>Index</h1>} />
+        </div>
+      </div>
+    </Switch>
   );
 }
 
