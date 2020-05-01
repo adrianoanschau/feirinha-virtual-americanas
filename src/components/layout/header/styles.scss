@@ -6,8 +6,16 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
+    .back {
+        position: absolute;;
+        font-size: 36px;
+        left: 0;
+        color: white;
+        padding: 0 5px;
+    }
     > div {
         width: 100%;
+        min-height: 52px;
         flex: 1 1 100%;
         display: flex;
         justify-content: center;
