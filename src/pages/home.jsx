@@ -11,7 +11,7 @@ const images = importAll(require.context('../assets/banners/quick', false, /\.(p
 export function Home() {
   return (
     <div className="Home-Page">
-      <form name="contact" netlify>
+      <form name="contact" data-netlify="true">
         <p>
           <label>Name <input type="text" name="name" /></label>
         </p>
