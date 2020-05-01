@@ -1,0 +1,27 @@
+.Main-Header {
+    position: relative;
+    background-color: #fa0008;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    > div {
+        width: 100%;
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        &:first-child {
+            padding-bottom: 7px;
+        }
+        &:last-child {
+            padding-top: 7px;
+        }
+    }
+    .TextLogo {
+        width: 120px;
+        fill: white;
+    }
+}

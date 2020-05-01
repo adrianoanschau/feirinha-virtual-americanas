@@ -1,18 +1,22 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import logo from './assets/logo.png';
-import './App.css';
+import {Switch, Route} from 'react-router-dom';
+
+import {Home} from './pages';
+import {Header, Menu} from './components/layout';
 
 function App() {
   return (
-    <Switch>
-      <div className="App">
-        <img src={logo} className="App-logo" alt="logo" />
-        <div>
-          <Route path="/" render={() => <h1>Index</h1>} />
+    <>
+      <div className="container">
+        <Header />
+        <div className="wrapper">
+          <Switch>
+            <Route path="/" component={Home} />
+          </Switch>
         </div>
       </div>
-    </Switch>
+      <Menu />
+    </>
   );
 }
 

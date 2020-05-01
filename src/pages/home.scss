@@ -1,0 +1,25 @@
+.Home-Page {
+    display: flex;
+    flex-direction: column;
+    div.banners > * {
+        margin-bottom: 15px;
+        &.red-box {
+            background-color: #fa0008;
+            color: white;
+            text-align: center;
+            padding: 10px 4px;
+        }
+    }
+    .quick-access {
+        width: 100%;
+        overflow-x: auto;
+        ul {
+            display: flex;
+            width: calc(13 * 80px);
+            li {
+                width: 80px;
+                padding: 0 5px;
+            }
+        }
+    }
+}
