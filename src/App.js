@@ -7,6 +7,7 @@ function App() {
   return (
     <Switch>
       <div className="App">
+        <img src={logo} className="App-logo" alt="logo" />
         <div>
           <Route path="/" render={() => <h1>Index</h1>} />
         </div>
