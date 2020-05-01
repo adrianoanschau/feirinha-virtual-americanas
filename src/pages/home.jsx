@@ -11,27 +11,17 @@ const images = importAll(require.context('../assets/banners/quick', false, /\.(p
 export function Home() {
   return (
     <div className="Home-Page">
-      <div className="quick-access">
-        <ul>
-          {images.map((image, key) =>
-            <li key={key}>
-              <img src={image} />
-            </li>
-          )}
-        </ul>
-      </div>
-      <div className="banners">
-        <div className="banner red-box">
-          <h2>COVID-19</h2>
-          <p>acompanhe aqui nossas ações de combate ao coronavirus</p>
-        </div>
-        <div className="banner">
-          <img src={iphonese} />
-        </div>
-        <div className="banner">
-          <img src={maes} />
-        </div>
-      </div>
+      <form name="contact" netlify>
+        <p>
+          <label>Name <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Email <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
     </div>
   );
 }
