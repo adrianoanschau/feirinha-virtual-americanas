@@ -22,8 +22,22 @@ export function FeirinhaLocal() {
         <h2>Produtos fresquinhos entregues em até 2 horas</h2>
         <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
       </div>
-      <div>
-        {categories.map(category => <p key={category.id_category}>{category.name}</p>)}
+      <br/>
+      <div className="categories">
+        {categories.map(({
+          id_category,
+          name,
+          image,
+          description
+        }) => 
+          <div key={id_category}>
+            <figure>
+              <img src={image} alt={name} />
+            </figure>
+            <h2>{name}</h2>
+            <p>{description}</p>
+          </div>
+        )}
       </div>
     </div>
   );

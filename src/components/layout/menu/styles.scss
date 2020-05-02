@@ -13,7 +13,7 @@
         ul {
             height: 100%;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(5, 1fr);
             li {
                 font-size: 0.7rem;
                 text-align: center;

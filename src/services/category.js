@@ -1,5 +1,3 @@
 import api from './api';
 
-export async function getCategories() {
-    return api.get('/category');
-}
+export const getCategories = async () => api.get('/category');
