@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const Api = axios.create({
-    baseURL: 'http://35.223.12.207/api',
+    baseURL: 'https://gestorvirtual.net.br/api',
 });
 
 Api.interceptors.response.use((res) => {
