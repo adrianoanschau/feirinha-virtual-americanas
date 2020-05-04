@@ -14,7 +14,7 @@ export function Categories() {
   
     React.useEffect(() => {
       (async () => setCategories(await getCategories()))();
-    }, [setCategories]);
+    }, []);
 
     return <div className="categories">
         <div className="categories-wrapper" style={{ width: 100 * categories.length }}>

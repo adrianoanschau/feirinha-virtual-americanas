@@ -13,7 +13,7 @@ export function HowTo() {
     return <div className="HowTo-Page">
         <Link to="/localizacao">
             <figure>
-                <img src="/images/como-funciona.png" />
+                <img src="/images/como-funciona.png" alt="Como Funciona a feirinha" />
             </figure>
         </Link>
     </div>
