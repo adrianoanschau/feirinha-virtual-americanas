@@ -1,0 +1,39 @@
+.Localization-Page {
+    position: relative;
+    height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 100px !important;
+    &:after {
+        content: "";
+        background: url('/images/localization-map.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -640px;
+        opacity: 0.2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        .form-field {
+            margin-bottom: 20px;
+            .label {
+                color: rgb(122, 107, 88);
+                font-size: 18px;
+            }
+            .input-field {
+                border: 1px solid #D0C8BE;
+            }
+        }
+        .button {
+            margin-top: 35px;
+        }
+    }
+}

@@ -7,11 +7,21 @@
     align-content: center;
     align-items: center;
     .back {
-        position: absolute;;
-        font-size: 36px;
+        position: absolute;
         left: 0;
         color: white;
-        padding: 0 5px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        span {
+            position: relative;
+            left: -12px;
+            font-size: 18px;
+        }
+        .icon {
+            font-size: 30px;
+            left: -5px;
+        }
     }
     > div {
         width: 100%;
@@ -31,5 +41,8 @@
     .TextLogo {
         width: 120px;
         fill: white;
+    }
+    .field {
+        border-radius: 12px;
     }
 }
