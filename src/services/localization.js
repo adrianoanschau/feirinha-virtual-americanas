@@ -1,7 +1,5 @@
 import api from './api';
 
-export const getCategories = async () => api.get('/category');
-
 export const getLocals = async () => api.get('/store_local')
     .then(locals => {
         return Object.values(locals.reduce((acc, curr) => {

@@ -2,6 +2,7 @@ import React from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import './main.scss';
 import { AppContext } from '../App';
+import {Categories} from '../components/categories';
 
 export function Main() {
     const { setTitle } = React.useContext(AppContext);
@@ -22,5 +23,11 @@ export function Main() {
         <p className="location">
           Você está na Feirinha do bairro <strong>Morumbi</strong> <Link to="/localizacao">(alterar)</Link>.
         </p>
+        <Categories />
+        <div className="banner">
+          <figure>
+            <img src="/images/banner1.png" alt="Banner - Tenha mais com quem você ama!"/>
+          </figure>
+        </div>
     </div>
 } 
