@@ -30,8 +30,8 @@ export function Header() {
                     <input type="text" placeholder="tem tuuudo, pode procurar :)" />
                 </div>
             </div>
+            {!!title && <div className="tendinha"></div>}
         </header>
-        {!!title && <div className="tendinha"></div>}
     </>
 
 }

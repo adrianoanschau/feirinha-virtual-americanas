@@ -1,7 +1,7 @@
 import React from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
 
-import {Home, Localization, Main} from './pages';
+import {Home, HowTo, Localization, Main} from './pages';
 import {Header, Menu} from './components/layout';
 
 export const AppContext = React.createContext();
@@ -18,6 +18,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/home" component={Home} />
+          <Route path="/como-funciona" component={HowTo} />
           <Route path="/localizacao" component={Localization} />
           <Route path="/feira" component={Main} />
           <Redirect to="/home" />

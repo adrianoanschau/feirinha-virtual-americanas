@@ -1,10 +1,18 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import './main.scss';
 import { AppContext } from '../App';
 
 export function Main() {
     const { setTitle } = React.useContext(AppContext);
+    const history = useHistory();
+
+    React.useEffect(() => {
+      const localization = localStorage.getItem('localization');
+      if (!localization) {
+        history.push('/como-funciona');
+      }
+    }, [])
   
     React.useEffect(() => {
       setTitle('feirinha local');

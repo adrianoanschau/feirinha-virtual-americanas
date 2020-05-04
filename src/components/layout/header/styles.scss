@@ -46,3 +46,13 @@
         border-radius: 12px;
     }
 }
+.tendinha {
+    background-image: url("/images/tendinha.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
