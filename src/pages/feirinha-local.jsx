@@ -1,7 +1,7 @@
 import React from 'react';
 import './feirinha-local.scss';
 import { AppContext } from '../App';
-import { getCategories } from '../services/category';
+import { getCategories } from '../services/categories';
 
 export function FeirinhaLocal() {
 

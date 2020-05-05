@@ -10,13 +10,14 @@ export function Header() {
 
     const {title} = React.useContext(AppContext);
 
-    return (
+    return <>
         <header className="Main-Header">
             <div>
                 {!!title && <Link className="back" to="/home">
                     <span className="icon">
                         <IoIosArrowBack />
                     </span>
+                    <span>Voltar</span>
                 </Link>}
                 <div className="title">
                     {!title && <TextLogo className="TextLogo" />}
@@ -24,12 +25,13 @@ export function Header() {
                 </div>
             </div>
             <div>
-                <div className="field">
+                <div className="input-field">
                     <span className="icon"><GoSearch /></span>
                     <input type="text" placeholder="tem tuuudo, pode procurar :)" />
                 </div>
             </div>
+            {!!title && <div className="tendinha"></div>}
         </header>
-    )
+    </>
 
 }

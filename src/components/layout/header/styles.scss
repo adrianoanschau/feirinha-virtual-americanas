@@ -7,11 +7,21 @@
     align-content: center;
     align-items: center;
     .back {
-        position: absolute;;
-        font-size: 36px;
+        position: absolute;
         left: 0;
         color: white;
-        padding: 0 5px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        span {
+            position: relative;
+            left: -12px;
+            font-size: 18px;
+        }
+        .icon {
+            font-size: 30px;
+            left: -5px;
+        }
     }
     > div {
         width: 100%;
@@ -32,4 +42,17 @@
         width: 120px;
         fill: white;
     }
+    .field {
+        border-radius: 12px;
+    }
+}
+.tendinha {
+    background-image: url("/images/tendinha.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+    left: 0;
+    width: 100%;
 }

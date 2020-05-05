@@ -29,8 +29,7 @@ body, #root {
 }
 
 #root > .container {
-  padding-bottom: 80px;
-  > .wrapper {
+  > [class*=Page] {
     padding: 18px 12px;
   }
 }
@@ -45,14 +44,29 @@ ul {
   align-items: center;
 }
 
-.field {
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url(/images/select.svg);
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  border: 1px solid #dfdfdf;
+  border-radius: 2px;
+  margin-right: 2rem;
+  padding: 1rem;
+  padding-right: 2rem;
+}
+
+
+.input-field {
   position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-color: white;
   border-width: 0;
-  border-radius: 12px;
+  border-radius: 4px;
   width: 100%;
   .icon {
     font-size: 20px;
@@ -62,13 +76,38 @@ ul {
   }
   input {
     border-width: 0;
-    background-color: transparent;
     font-size: 20px;
+    background-color: transparent;
     color: #808080dd;
-    padding: 10px 4px 10px 34px;
+    padding: 10px 12px 10px 34px;
     width: 100%;
     &::placeholder {
       color: #808080dd;
     }
+  }
+}
+input.input-field,
+select.input-field {
+  border-width: 0;
+  font-size: 20px;
+  color: #808080dd;
+  padding: 10px 12px;
+  width: 100%;
+  &::placeholder {
+    color: #808080dd;
+  }
+}
+
+.button {
+  background-color: #fa0008;
+  color: white;
+  border: 0;
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 4px;
+  &:disabled {
+    background-color: transparentize($color: #fa0008, $amount: 0.7);
   }
 }

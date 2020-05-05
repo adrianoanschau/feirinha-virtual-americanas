@@ -1,7 +1,9 @@
 .Home-Page {
     display: flex;
     flex-direction: column;
+    margin-bottom: 60px;
     div.banners > * {
+        display: block;
         margin-bottom: 15px;
         &.red-box {
             background-color: #fa0008;

@@ -1,7 +1,8 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './home.scss';
 import { AppContext } from '../App';
-import iphonese from '../assets/banners/iphone-se.png'
+import feirinha from '../assets/banners/feirinha.jpeg'
 import maes from '../assets/banners/maes.png'
 
 function importAll(r) {
@@ -33,9 +34,9 @@ export function Home() {
           <h2>COVID-19</h2>
           <p>acompanhe aqui nossas ações de combate ao coronavirus</p>
         </div>
-        <div className="banner">
-          <img src={iphonese} alt="IPhone SE" />
-        </div>
+        <Link className="banner" to="/lojas">
+          <img src={feirinha} alt="Feirinha Local" />
+        </Link>
         <div className="banner">
           <img src={maes} alt="Dia das Mães" />
         </div>
