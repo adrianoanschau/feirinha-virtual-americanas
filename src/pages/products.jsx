@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link, useHistory} from 'react-router-dom';
-import './stores.scss';
+import './products.scss';
 import { AppContext } from '../App';
 import {Categories} from '../components/categories';
 import {Products} from '../components/products';
@@ -23,7 +23,7 @@ export function ProductsPage() {
       setTitle('feirinha local');
     }, [setTitle]);
 
-    return <div className="Stores-Page">
+    return <div className="Products-Page">
         <p className="location">
           Você está na Feirinha do bairro <strong>{localization && localization.neighborhood}</strong> <Link to="/localizacao">(alterar)</Link>.
         </p>

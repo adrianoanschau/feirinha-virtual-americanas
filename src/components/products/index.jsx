@@ -6,7 +6,7 @@ import { AppContext } from '../../App';
 import { getProducts } from '../../services/products';
 import {priceValue} from '../../utils/price';
 
-export function Products() {
+export function Products({ grid = false }) {
 
     const { setTitle } = React.useContext(AppContext);
     const [products, setProducts] = React.useState([]);
@@ -20,7 +20,7 @@ export function Products() {
       (async () => setProducts(await getProducts(categoryId)))();
     }, [categoryId]);
 
-    return <div className="products">
+    return <div className={`products ${grid && 'grid'}`}>
         <div className="products-wrapper">
             {products.map(({
                 id_item,

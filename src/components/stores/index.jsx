@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './styles.scss';
 import { AppContext } from '../../App';
 import { getStores } from '../../services/stores';
@@ -25,7 +26,7 @@ export function Stores() {
                 description,
                 image,
               }) => 
-              <div key={id_store}>
+              <Link key={id_store} to={`/loja/${id_store}`}>
                   <figure>
                       <img src={image} alt={name} />
                   </figure>
@@ -45,7 +46,7 @@ export function Stores() {
                         </p>
                     </div>
                   </div>
-              </div>
+              </Link>
               )}
         </div>
     </div>

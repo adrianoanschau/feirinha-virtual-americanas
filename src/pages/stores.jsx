@@ -9,6 +9,9 @@ export function StoresPage() {
     const { setTitle } = React.useContext(AppContext);
     const history = useHistory();
     const [localization, setLocalization] = React.useState();
+    const banner = parseInt(Math.random() * 100) % 2 === 0
+      ? <img src="/images/banner1.jpeg" alt="Banner - Tenha mais tempo com quem você ama!"/>
+      : <img src="/images/banner2.jpeg" alt="Banner - A entrega dos seus produtos não polui o meio ambiente!"/>
 
     React.useEffect(() => {
       const localization = localStorage.getItem('localization');
@@ -30,7 +33,7 @@ export function StoresPage() {
         <Categories />
         <div className="banner">
           <figure>
-            <img src="/images/banner1.png" alt="Banner - Tenha mais com quem você ama!"/>
+            {banner}
           </figure>
         </div>
         <Stores />
