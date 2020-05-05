@@ -6,6 +6,7 @@ import {
   HowTo,
   Localization,
   StoresPage,
+  StorePage,
   ProductsPage
 } from './pages';
 import {Header, Menu} from './components/layout';
@@ -27,6 +28,7 @@ function App() {
           <Route path="/como-funciona" component={HowTo} />
           <Route path="/localizacao" component={Localization} />
           <Route path="/lojas" component={StoresPage} />
+          <Route path="/loja/:storeId" component={StorePage} />
           <Route path="/produtos/:categoryId" component={ProductsPage} />
           <Redirect to="/home" />
         </Switch>

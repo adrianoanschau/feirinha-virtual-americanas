@@ -48,5 +48,21 @@
             }
         }
     }
-
+    &.grid {
+        .products-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            > div {
+                flex-direction: column;
+                justify-content: space-between;
+                height: 180px;
+                background-color: white;
+                figure {
+                    height: 115px;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
 }
