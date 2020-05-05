@@ -6,6 +6,11 @@ export const getProducts = async (categoryId) => {
     if (categoryId) {
         url = `/category_item/${categoryId}`;
     }
+    let localization = localStorage.getItem('localization');
+    if (localization) {
+        localization = JSON.parse(localization);
+        url = `${url}?lc=${localization.city}&ln=${localization.neighborhood}`;
+    }
     return api.get(url)
         .then(products => {
             return products.sort(sortBy('priority'));

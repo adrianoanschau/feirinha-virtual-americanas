@@ -34,7 +34,7 @@ export function Localization() {
 
     function selectLocalization() {
         localStorage.setItem('localization', JSON.stringify(localization));
-        history.push('/feira');
+        history.push('/lojas');
     }
 
     return (
@@ -46,7 +46,7 @@ export function Localization() {
                         onChange={(e) => changeCity(e.target.value)}>
                         <option value="">--selecione--</option>
                         {locals.map((local) =>
-                        <option value={local.id}>{local.city} - {local.state}</option>
+                        <option key={local.id} value={local.id}>{local.city} - {local.state}</option>
                         )}
                     </select>
                 </div>
@@ -57,7 +57,7 @@ export function Localization() {
                         disabled={!neighborhoods.length}>
                         <option value="">--selecione--</option>
                         {neighborhoods.map((neighborhood) =>
-                        <option value={neighborhood}>{neighborhood}</option>
+                        <option key={neighborhood} value={neighborhood}>{neighborhood}</option>
                         )}
                     </select>
                 </div>
