@@ -34,7 +34,7 @@ export function Home() {
           <h2>COVID-19</h2>
           <p>acompanhe aqui nossas ações de combate ao coronavirus</p>
         </div>
-        <Link className="banner" to="/feira">
+        <Link className="banner" to="/lojas">
           <img src={feirinha} alt="Feirinha Local" />
         </Link>
         <div className="banner">

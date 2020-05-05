@@ -1,17 +1,30 @@
-.stores{
-    .stores-wrapper {
+.products {
+    .products-wrapper {
         display: flex;
         flex-direction: column;
+        margin-top: 20px;
         > div {
             display: flex;
             margin-bottom: 10px;
             height: 120px;
             figure {
+                position: relative;
                 max-width: 46%;
                 overflow: hidden;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                .adicionar {
+                    position: absolute;
+                    background-color: white;
+                    z-index: 1;
+                    left: 0;
+                    bottom: 0;
+                    font-size: 28px;
+                    color: #A8CF45;
+                    width: 28px;
+                    height: 28px;
+                }
             }
             > div {
                 display: flex;
@@ -24,9 +37,10 @@
                 p {
                     color: #9B9B9B;
                 }
-                p.mandar-mensagem {
+                p.valor-do-produto {
                     display: flex;
                     align-items: center;
+                    font-weight: bold;
                     img {
                         margin-right: 5px;
                     }

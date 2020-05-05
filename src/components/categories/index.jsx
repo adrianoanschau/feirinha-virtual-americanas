@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './styles.scss';
 import { AppContext } from '../../App';
 import { getCategories } from '../../services/categories';
@@ -23,12 +24,12 @@ export function Categories() {
                 name,
                 image,
               }) => 
-              <div key={id_category}>
+              <Link key={id_category} to={`/produtos/${id_category}`}>
                   <figure>
                       <img src={image} alt={name} />
                   </figure>
                   <p>{name.toLowerCase()}</p>
-              </div>
+              </Link>
               )}
         </div>
       </div>

@@ -18,6 +18,7 @@ export function Stores() {
 
     return <div className="stores">
         <div className="stores-wrapper">
+            <h2 style={{ color: '#573123' }}>Visite as lojas disponíveis</h2>
             {stores.map(({
                 id_store,
                 name,

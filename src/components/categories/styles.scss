@@ -3,13 +3,15 @@
     .categories-wrapper {
         display: flex;
         justify-content: flex-start;
-        > div {
+        > a {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             margin-right: 10px;
+            text-decoration: none;
+            color: black;
             figure {
                 width: 90px;
                 height: 90px;
